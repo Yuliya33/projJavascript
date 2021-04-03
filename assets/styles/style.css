@@ -1,0 +1,399 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.containeur{
+
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+header.containeur{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0 70px 0;
+    
+}
+
+header.containeur::after{
+
+    content: "";
+    width: 65%;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid #60b59f;
+
+}
+
+.logo-containeur img{
+
+    max-width: 165px;
+    margin-left: 65px;
+        
+}
+
+header .panier{
+
+    display: flex;
+
+}
+
+header .panier a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+header .panier a:hover svg{
+    fill: #4c9582;
+    transition: fill 1s;
+}
+
+.panier-rempli{
+    fill: #60b59f;
+}
+
+header .panier h2{
+    margin-top: 8px;
+}
+
+header .panier svg{
+
+    max-width: 50px;
+    max-height: 50px;
+
+    margin-right: 65px;
+
+    transition: fill 0.7s;
+
+}
+
+.filtre{
+
+    display: flex;
+    padding-left: 60px;
+
+}
+
+.filtre select{
+
+    padding: 5px;
+    margin-left: 5px;
+
+}
+
+.filtre button{
+    padding: 5px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    transition: background 0.7s;
+}
+
+.filtre button:hover{    
+    background: #ff4d63;
+    color: white;    
+    transition: background 0.5s;
+    
+
+}
+
+.produits{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.produit{
+
+    max-width: 350px;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 0 14px 2px #7b8a98;
+    border-radius: 10px;
+
+}
+
+.produit:not(.vide):hover img{
+
+    transform: scale(0.9);
+    transition: transform 0.5s;
+    
+}
+
+.produit img{
+
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.7s;
+
+}
+
+.produit .description h2{
+
+    margin-top: 10px;
+
+}
+
+.produit:nth-child(1), .produit:nth-child(2), .produit:nth-child(3){
+
+    margin-top: 20px;
+
+}
+
+.vide{
+
+    filter: grayscale(1);
+    color: gray;
+    
+}
+
+.btn-voir-plus{
+    padding: 5px;
+    margin-left: 8px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    transition: background 0.7s;
+}
+
+.btn-voir-plus:hover{    
+    background: #ff4d63;
+    color: white;    
+    transition: background 0.6s;
+}
+
+
+
+/* page panier  */
+
+.tableau-panier{
+
+    box-shadow: 0 0 14px 2px #7b8a98;
+    border-radius: 10px;
+    padding: 15px;
+    width: 800px;
+    margin: 30px auto;
+      
+}
+
+.tableau-panier .ligne{
+
+    display: flex;
+
+}
+
+.tableau-panier .ligne .colonne{
+
+    width: 200px;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+            
+}
+
+.tableau-panier .ligne .colonne:last-child{
+
+    border-right: none;
+            
+}
+
+.tableau-panier .ligne:last-child .colonne{
+
+    border-bottom: none;
+                
+}
+
+.tableau-panier input{
+
+    width: 30%;
+    padding: 3px;
+
+}
+
+
+
+/* ------------------- */
+
+/* passer la commande */
+
+.passer-commande{
+
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+.passer-commande h1{
+
+    margin-left: 10px;
+
+}
+
+.passer-commande button{
+    padding: 5px;
+    margin-left: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    transition: background 0.7s;
+}
+
+.passer-commande button:hover{    
+    background: #ff4d63;
+    color: white;    
+    transition: background 0.6s;
+    
+
+}
+
+/* --------------------------- */
+
+/* formulaire */
+
+.formulaire{
+
+    box-shadow: 0 0 14px 2px #7b8a98;
+    border-radius: 10px;
+    padding: 15px;
+    width: 400px;
+    margin: 30px auto;
+
+}
+
+.formulaire > div{
+
+    margin: 12px 0;
+
+}
+
+.formulaire label{
+
+    margin-left: 3px;
+    margin-bottom: 2px;
+
+}
+
+.formulaire input{
+
+    padding: 3px;
+    width: 100%;
+
+}
+
+.formulaire .infolettre{
+
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+
+.formulaire .infolettre input{
+    width: initial;
+    margin-left: 15px;
+}
+
+.formulaire button{
+    padding: 5px;
+    margin-left: 8px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    transition: background 0.7s;
+}
+
+.formulaire button:hover{    
+    background: #ff4d63;
+    color: white;    
+    transition: background 0.6s;
+}
+
+.erreur-validation{
+
+    border: 2px solid red;
+    border-radius: 3px;
+    border-style: inset;
+    
+}
+
+.continuer-votre-visite{
+
+    box-shadow: 0 0 14px 2px #7b8a98;
+    border-radius: 10px;
+    padding: 15px;
+    width: 400px;
+    margin: 30px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+                
+}
+
+.continuer-votre-visite h1{
+
+    width: 100%;
+
+}
+
+.continuer-votre-visite a{
+
+    text-decoration: none;
+    padding: 5px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    transition: background 0.7s;
+    color: black;
+    background: rgb(239,239,239);
+
+}
+
+.continuer-votre-visite a:hover{
+    background: #ff4d63;
+    color: white;    
+    transition: background 0.6s;
+}
+
+/* -------------------------- */
+
+footer.containeur{
+
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
